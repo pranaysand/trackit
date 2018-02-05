@@ -19,9 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node-modules/font-awesome/css/font-awesome.css",
+        "../node-modules/bootstrap/dist/css/bootstrap.css"
       ],
-      "scripts": [],
+      "scripts":[
+        "../node-modules/jquery/dist/jquery.js",
+        "../node-modules/popper.js/dist/umd/popper.js",
+        "../node-modules/bootstrap/dist/js/bootstrap.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
