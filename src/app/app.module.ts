@@ -9,12 +9,15 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 //Creating Routes.
 const appRoutes: Routes=[
   {path:'',component:DashboardComponent},
   {path:'contacts',component:ContactsComponent},
   {path:'login',component:LoginComponent},
+  {path:'clients',component:ClientsComponent},
+ 
 ]
 
 
@@ -26,7 +29,8 @@ const appRoutes: Routes=[
     ContactsComponent,
     ContactDetailsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

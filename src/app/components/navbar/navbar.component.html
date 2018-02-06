@@ -1,0 +1,95 @@
+
+
+<div style="padding-top:0px;position: relative;" >
+<div class="nav-side-menu">
+ 
+  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+      <div class="menu-list">
+
+          <ul id="menu-content" class="menu-content collapse out">
+              <li>
+                <a href="#" routerLink="/">
+                <i class="fa fa-dashboard fa-lg" ></i> Dashboard
+                </a>
+              </li>
+
+              <li  data-toggle="collapse" data-target="#products" class="collapsed">
+                <a href="#"><i class="fa fa-gift fa-lg"></i>Contacts<span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="products">
+                  <li ><a href="#" routerLink="/clients">Clients</a></li>
+                  <li ><a href="#">Supplies</a></li>
+                  <li ><a href="#">Staff</a></li>
+              </ul>
+
+
+              <li data-toggle="collapse" data-target="#service" class="collapsed">
+                <a href="#"><i class="fa fa-globe fa-lg"></i> Requests<span class="arrow"></span></a>
+              </li>  
+              <ul class="sub-menu collapse" id="service">
+                <li class="active">Open Tickets</li>
+                <li class="active">Pending Tickets</li>
+                <li class="active">Completed Tickets</li>
+              </ul>
+
+
+              <li data-toggle="collapse" data-target="#new" class="collapsed">
+                <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="new">
+                <li>New New 1</li>
+                <li>New New 2</li>
+                <li>New New 3</li>
+              </ul>
+
+
+               <li>
+                <a href="#">
+                <i class="fa fa-user fa-lg"></i> Profile
+                </a>
+                </li>
+
+               <li>
+                <a href="#" >
+                <i class="fa fa-users fa-lg" ></i> Users
+                </a>
+              </li>
+          </ul>
+   </div>
+</div>
+</div>
+<div >
+
+  <div style="padding-top:0px;position: relative"><nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+    <h1 class="navbar-brand " href="#!" routerLink="/" >Track-It</h1>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse  " style="padding-left:950px" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto"> 
+          <h4 class="nav-item">
+              <a class="nav-link" href="#">Username</a>
+            </h4>
+        <h4 class="nav-item">
+          <a class="nav-link" href="#">Settings</a>
+        </h4>
+        <h4 class="nav-item dropdown">
+          <a class="nav-link " href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+           Logout
+          </a>
+        </h4>
+      </ul>
+     
+    </div>
+  </nav>
+  </div>
+</div>
+<div style="padding-left:320px;padding-top:10px">
+
+    <router-outlet></router-outlet>
+</div>
+
+  
