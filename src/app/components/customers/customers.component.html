@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col md-10">
+        <h2 ><i class="fa fa-user"></i> Customers</h2>
+    </div>
+    <div class="col md-2">
+        <a class="btn btn-primary" routerLink="/addcustomer"><h4><i class="fa fa-plus-circle"></i>Add Customer</h4></a>
+    </div>
+</div>
+<div class="row">
+<div class="col md-6">
+    <div class="text-right text-secondary">Total Balance:</div>
+</div>    
+</div>
+<table class="table table-striped" >
+    <thead class="thead-inverse">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of customers">
+            <th>{{x.firstName}}</th>
+            <th>{{x.email}}</th>
+            <th>{{x.balance}}</th>
+        </tr>
+    </tbody>
+</table>
