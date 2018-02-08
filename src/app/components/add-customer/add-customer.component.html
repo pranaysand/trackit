@@ -48,6 +48,14 @@
             #balance="ngModel"
             >
           </div>
+          <div class="form-group">
+            <label for="DOB" >Date of Birth (MM/DD/YYYY)</label>
+            <input [(ngModel)]="customer.DOB"
+            class="form-control"
+            name="DOB"
+            #DOB="ngModel"
+            >
+          </div>
 <input type="submit" value="Submit" class="btn btn-success" #submit>
   </form>
 </div>

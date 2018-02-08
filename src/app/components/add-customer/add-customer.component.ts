@@ -28,8 +28,10 @@ customerInfo:Customer;
     else{
       this.customerInfo=value.form.value;
       console.log(this.customerInfo);
+      this.customerInfo.dateCreated=new Date();
       this.customersService.addCustomers(this.customerInfo);
       this.router.navigate(["/customers"]);
+      console.log(this.customerInfo.dateCreated);
     }
   }
 
