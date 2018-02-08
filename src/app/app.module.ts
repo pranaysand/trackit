@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import {NavbarComponent} from "./components/navbar/navbar.component";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
-import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import{CustomersService} from "./services/customers.service";
@@ -19,6 +18,7 @@ import{CustomersService} from "./services/customers.service";
 import{environment} from '../environments/environment';
 import { CustomersComponent } from './components/customers/customers.component';
 import { AddCustomerComponent } from './components/add-customer/add-customer.component';
+import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 
 //Creating Routes.
 const appRoutes: Routes=[
@@ -26,7 +26,8 @@ const appRoutes: Routes=[
   {path:'contacts',component:ContactsComponent},
   {path:'login',component:LoginComponent},
   {path:'customers',component:CustomersComponent},
-  {path:'addcustomer', component:AddCustomerComponent}
+  {path:'addcustomer', component:AddCustomerComponent},
+  {path:"customers/:id",component: CustomerDetailsComponent},
 
  
 ]
@@ -38,11 +39,11 @@ const appRoutes: Routes=[
     NavbarComponent,
     DashboardComponent,
     ContactsComponent,
-    ContactDetailsComponent,
     LoginComponent,
     RegisterComponent,
     CustomersComponent,
     AddCustomerComponent,
+    CustomerDetailsComponent,
   
   ],
   imports: [
