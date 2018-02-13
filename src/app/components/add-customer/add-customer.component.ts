@@ -9,13 +9,21 @@ import{Router} from "@angular/router";
   styleUrls: ['./add-customer.component.css']
 })
 export class AddCustomerComponent implements OnInit {
-  customer:any={
+  customer?:any={
     firstName:'',
     lastName:'',
     email:'',
     balance:0,
-    activity:true
+    activity:true,
+    address:{
+      street1:'home',
+
+    },
+    id:'',
+    dateCreated:'',
+    DOB:'',
 };
+dropdownMenuButton=false;
 customerInfo:Customer;
   constructor(private customersService:CustomersService, private router:Router) { }
 

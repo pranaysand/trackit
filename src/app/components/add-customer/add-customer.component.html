@@ -1,7 +1,8 @@
-<div class="col md-6">
+<div class="col md-6" stype="{margin-bottom:10px}">
   <a class="btn btn-primary" routerLink="/customers"><h4><i class="fa fa-angle-double-left"></i>Customers</h4></a>
 </div>
-<div class="card">
+<br>
+<div class="card" style="position:static">
 <div class="card-header">Add Customer</div>
 <div class="card-body">
   <form #addCustomer="ngForm" (ngSubmit)="onSubmit(addCustomer)">
@@ -56,7 +57,39 @@
             #DOB="ngModel"
             >
           </div>
-<input type="submit" value="Submit" class="btn btn-success" #submit>
+          <div class="dropdown" >
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Add Address
+              </button>
+              <div id="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-item" >
+                    <div class="form-group">
+                        <label for="street1" >Street 1: </label>
+                        <input [(ngModel)]="customer.address.street1"
+                        class="form-control"
+                        type="text"
+                        name="customer.address.street1"
+                        #customer.address.street1="ngModel"
+                        >
+                      </div>
+                </div>
+              <div class="dropdown-item">
+                <div class="form-group">
+                  <label for="street2" >Street 2: </label>
+                  <input [(ngModel)]="customer.address.street2"
+                  class="form-control"
+                  name="customer.address.street2"
+                  #customer.address.street2="ngModel"
+                  >
+                </div>
+              </div>
+                
+              </div>
+            </div>
+            <div align="center">
+              <input type="submit" value="Submit" class="btn btn-success " #submit>
+            </div>
+
   </form>
 </div>
 </div>

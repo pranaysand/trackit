@@ -1,14 +1,45 @@
+<div>
 
+  <nav class=" container-fluid navbar navbar-expand-md navbar-inverse bg-primary" style="position:fixed;box-shadow:10px; padding-top:0px">
+    <img src="../../../assets/logo.png" alt="Track-It" width="75px" height="75px" style="padding-left:30px">
+    <a class="navbar-brand" style="color:#fff;padding-left:20px"  href="#"><h1>Track-It</h1></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div style="padding-top:0px;position: relative;" >
-<div class="nav-side-menu">
+    <div class="collapse navbar-collapse mr-auto "  id="navbarsExample04" style="align-items:center;padding-top:15px">
+      <ul class="ml-auto"  >
+          <p class="nav-item active ">
+            <a class="nav-link mr-auto" href="#" style="text-align:center">UserName</a>
+          </p>
+        </ul>
+        <ul >
+      <p   class="nav-item active ">
+              <a class="nav-link" href="#">Settings<span class="sr-only">(current)</span></a>
+      </p>
+          </ul>
+      <ul>
+        
+      <p class="nav-item active ">
+
+        <a class="nav-link" href="#"><i class="fa fa-power-off"></i> &nbsp;Logout <span class="sr-only">(current)</span></a>
+      </p>
+    </ul>
+   
+    
+    </div>
+  </nav>
+</div>
+<div >
+<div >
+<div class="nav-side-menu" style="position:fixed;float:left">
  
   <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
       <div class="menu-list">
 
           <ul id="menu-content" class="menu-content collapse out">
-              <li>
+              <li >
                 <a href="#" routerLink="/">
                 <i class="fa fa-dashboard fa-lg" ></i> Dashboard
                 </a>
@@ -18,7 +49,7 @@
                 <a href="#"><i class="fa fa-gift fa-lg"></i>Contacts<span class="arrow"></span></a>
               </li>
               <ul class="sub-menu collapse" id="products">
-                  <li ><a href="#" routerLink="/customers">Customers</a></li>
+                  <li  routerLink="/customers"><a href="#" routerLink="/customers">Customers</a></li>
                   <li ><a href="#">Supplies</a></li>
                   <li ><a href="#">Staff</a></li>
               </ul>
@@ -59,37 +90,10 @@
    </div>
 </div>
 </div>
-<div >
 
-  <div style="padding-top:0px;position: relative"><nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
-    <h1 class="navbar-brand " href="#!" routerLink="/" >Track-It</h1>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse  " style="padding-left:950px" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto"> 
-          <h4 class="nav-item">
-              <a class="nav-link" href="#">Username</a>
-            </h4>
-        <h4 class="nav-item">
-          <a class="nav-link" href="#">Settings</a>
-        </h4>
-        <h4 class="nav-item dropdown">
-          <a class="nav-link " href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-           Logout
-          </a>
-        </h4>
-      </ul>
-     
-    </div>
-  </nav>
-  </div>
 </div>
-<div style="padding-left:320px;padding-top:10px">
-
-    <router-outlet></router-outlet>
+<div  class="container" style="float:right;position:static; padding-top:100px;margin:15px ">
+  <router-outlet></router-outlet>
 </div>
 
   
