@@ -1,16 +1,17 @@
-<div>
+<div class="container-fluid">
+<div class="row" style="position:static">
 
-  <nav class=" container-fluid navbar navbar-expand-md navbar-inverse bg-primary" style="position:fixed;box-shadow:10px; padding-top:0px">
-    <img src="../../../assets/logo.png" alt="Track-It" width="75px" height="75px" style="padding-left:30px">
-    <a class="navbar-brand" style="color:#fff;padding-left:20px"  href="#"><h1>Track-It</h1></a>
+  <nav class=" container-fluid navbar navbar-expand-md navbar-inverse bg-primary" style="position:fixed;box-shadow:10px; padding-top:0px;z-index:30">
+   
+    <a class="navbar-brand" style="color:#fff;padding-left:20px"  href="#"><h1> <img src="../../../assets/logo.png" alt="Track-It" width="45px" height="45px" >Track-It</h1></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse mr-auto "  id="navbarsExample04" style="align-items:center;padding-top:15px">
+    <div class="collapse navbar-collapse pull-left "  id="navbarsExample04" style="align-items:center">
       <ul class="ml-auto"  >
           <p class="nav-item active ">
-            <a class="nav-link mr-auto" href="#" style="text-align:center">UserName</a>
+            <a class="nav-link " href="#" style="text-align:center">UserName</a>
           </p>
         </ul>
         <ul >
@@ -30,70 +31,76 @@
     </div>
   </nav>
 </div>
-<div >
-<div >
-<div class="nav-side-menu" style="position:fixed;float:left">
- 
-  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+<div class="img-responsive">
+<div class="row" >
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xm-3 nav-side-menu" id="sidemenu">
+            
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+          
+                <div class="menu-list">
+          
+                    <ul id="menu-content" class="menu-content collapse out">
+                        <li routerLink="">
+                          <a href="#">
+                          <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                          </a>
+                        </li>
+        
+                        <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                          <a ><i class="fa fa-gift fa-lg"></i> Contacts<span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="products">
+                            <li class="active" routerLink="./customers"><a >Consumers</a></li>
+                            <li><a href="#">Suppliers</a></li>
+                            
+                        </ul>
+        
+        
+                        <li data-toggle="collapse" data-target="#service" class="collapsed">
+                          <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                        </li>  
+                        <ul class="sub-menu collapse" id="service">
+                          <li>New Service 1</li>
+                          <li>New Service 2</li>
+                          <li>New Service 3</li>
+                        </ul>
+        
+        
+                        <li data-toggle="collapse" data-target="#new" class="collapsed">
+                          <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="new">
+                          <li>New New 1</li>
+                          <li>New New 2</li>
+                          <li>New New 3</li>
+                        </ul>
+        
+        
+                         <li>
+                          <a href="#">
+                          <i class="fa fa-user fa-lg"></i> Profile
+                          </a>
+                          </li>
+        
+                         <li>
+                          <a href="#">
+                          <i class="fa fa-users fa-lg"></i> Users
+                          </a>
+                        </li>
+                    </ul>
+             </div>
+        </div>
 
-      <div class="menu-list">
-
-          <ul id="menu-content" class="menu-content collapse out">
-              <li >
-                <a href="#" routerLink="/">
-                <i class="fa fa-dashboard fa-lg" ></i> Dashboard
-                </a>
-              </li>
-
-              <li  data-toggle="collapse" data-target="#products" class="collapsed">
-                <a href="#"><i class="fa fa-gift fa-lg"></i>Contacts<span class="arrow"></span></a>
-              </li>
-              <ul class="sub-menu collapse" id="products">
-                  <li  routerLink="/customers"><a href="#" routerLink="/customers">Customers</a></li>
-                  <li ><a href="#">Supplies</a></li>
-                  <li ><a href="#">Staff</a></li>
-              </ul>
-
-
-              <li data-toggle="collapse" data-target="#service" class="collapsed">
-                <a href="#"><i class="fa fa-globe fa-lg"></i> Requests<span class="arrow"></span></a>
-              </li>  
-              <ul class="sub-menu collapse" id="service">
-                <li class="active">Open Tickets</li>
-                <li class="active">Pending Tickets</li>
-                <li class="active">Completed Tickets</li>
-              </ul>
-
-
-              <li data-toggle="collapse" data-target="#new" class="collapsed">
-                <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
-              </li>
-              <ul class="sub-menu collapse" id="new">
-                <li>New New 1</li>
-                <li>New New 2</li>
-                <li>New New 3</li>
-              </ul>
-
-
-               <li>
-                <a href="#">
-                <i class="fa fa-user fa-lg"></i> Profile
-                </a>
-                </li>
-
-               <li>
-                <a href="#" >
-                <i class="fa fa-users fa-lg" ></i> Users
-                </a>
-              </li>
-          </ul>
-   </div>
-</div>
-</div>
-
-</div>
-<div  class="container" style="float:right;position:static; padding-top:100px;margin:15px ">
+<div  class="container-fluid col-lg-9 col-md-9 col-sm-9 col-xm-9 " id="main">
   <router-outlet></router-outlet>
 </div>
+
+</div>
+</div>
+</div>
+
+
+
+
 
   

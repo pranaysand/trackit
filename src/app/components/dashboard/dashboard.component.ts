@@ -9,11 +9,24 @@ import{Customer} from "../../models/customer";
 })
 export class DashboardComponent implements OnInit {
 customers:Customer[];
+name:string="pranay";
+age:number=25;
+private status:string;
   constructor(private customersService:CustomersService) {
 
    }
 
   ngOnInit() {
+    
 }
 
+
 }
+class childDash extends DashboardComponent{
+printname(){
+  console.log(name);
+}
+  
+}
+
+

@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
