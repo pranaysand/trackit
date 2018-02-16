@@ -25,26 +25,37 @@ export class CustomersComponent implements OnInit {
   });
   console.log("Hii from ngoninit");
     }
-// Sorting According to Balance implemented
-  sortBalance(){
-    this.toggleSort=!this.toggleSort;
-    if(this.toggleSort==false){
-      this.customers=this.customers.sort((a,b)=>{
-        return a.balance-b.balance;
-        
-    });
-  }
-    else{
-      this.customers=this.customers.sort((a,b)=>{
-        return a.balance+b.balance;
-    }
-  );
+    //Sorting According to Name
+    sortName(){
+      this.toggleSort=!this.toggleSort;
+      if(this.toggleSort==false){
+this.customers=this.customers.sort((a,b)=>{
+  var A=a.firstName.toUpperCase();
+  var B=b.firstName.toUpperCase();
+  if(A<B){
+    return -1;
+  };
+  if(A>B){
+    return +1;
+  };
+  return 0;
+});
+      }
+      else{
+        this.customers=this.customers.sort((a,b)=>{
+          var A=a.firstName.toUpperCase();
+          var B=b.firstName.toUpperCase();
+          if(A>B){
+            return -1;
+          };
+          if(A<B){
+            return +1;
+          };
+          return 0;
+        });
+      };
     };
-    
-     
- console.log(this.customers);
- console.log(this.toggleSort);
- };
+
  //Sort by email Custom Function implemented
  sortEmail(){
   this.toggleSort=!this.toggleSort;
@@ -76,6 +87,26 @@ export class CustomersComponent implements OnInit {
       
   });
 };   
+};
+// Sorting According to Balance implemented
+sortBalance(){
+  this.toggleSort=!this.toggleSort;
+  if(this.toggleSort==false){
+    this.customers=this.customers.sort((a,b)=>{
+      return a.balance-b.balance;
+      
+  });
+}
+  else{
+    this.customers=this.customers.sort((a,b)=>{
+      return a.balance+b.balance;
+  }
+);
+  };
+  
+   
+console.log(this.customers);
+console.log(this.toggleSort);
 };
 
 }
