@@ -13,18 +13,21 @@
     </div>    
     </div>
     <table class="table table-striped" >
-        <thead class="thead-inverse">
+        <thead class="thead-inverse" align="center">
             <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Balance</th>
+                <th><button class="btn btn-info" (click)="sortName()">Name <i class="fa fa-sort"></i></button></th>
+                <th><button class="btn btn-info"(click)="sortEmail()">Email <i class="fa fa-sort"></i></button></th>
+                <th><button class="btn btn-info" (click)="sortBalance()">Balance <i class="fa fa-sort"></i></button></th>
+                <th><button class="btn btn-info" (click)="sortDate()">Date Joined <i class="fa fa-sort"></i></button></th>
+                <th></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody align="center">
             <tr *ngFor="let x of customers">
                 <th>{{x.firstName}}</th>
                 <th>{{x.email}}</th>
                 <th>{{x.balance}}</th>
+                <th>{{x.dateCreated}}</th>
                 <button class="btn btn-primary" routerLink="/customers/{{x.id}}">Details</button>
             </tr>
         </tbody>

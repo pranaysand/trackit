@@ -1,0 +1,13 @@
+.table thead{
+    background-color:#10d6f5;
+    align: center;
+}
+.table{
+    background:#d7faff;
+}
+
+.table thead th button{
+    padding-left:40px;
+    padding-right:40px;
+    font-weight:bold;
+}
