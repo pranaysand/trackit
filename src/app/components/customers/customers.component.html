@@ -26,8 +26,8 @@
             <tr *ngFor="let x of customers">
                 <th>{{x.firstName}}</th>
                 <th>{{x.email}}</th>
-                <th>{{x.balance}}</th>
-                <th>{{x.dateCreated}}</th>
+                <th>{{x.balance | currency}}</th>
+                <th>{{x.dateCreated | date:"shortDate"}}</th>
                 <button class="btn btn-primary" routerLink="/customers/{{x.id}}">Details</button>
             </tr>
         </tbody>

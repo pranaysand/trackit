@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomersService} from '../../services/customers.service';
 import{Customer} from "../../models/customer";
+import { DatePipe, CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-customers',
