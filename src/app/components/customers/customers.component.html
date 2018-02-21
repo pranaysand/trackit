@@ -1,15 +1,30 @@
 <div>
     <div class="row" >
-        <div class="col md-8" style="position:static">
-            <h2 ><i class="fa fa-user"></i> Customers</h2>
-        </div>
-        <div class="col md-4 " style="position:static" >
-            <a class="btn btn-primary" routerLink="/addcustomer"><h4><i class="fa fa-plus-circle"></i>Add Customer</h4></a>
-        </div>
+        <div class="col-lg-12 text-center" style="position:static" >
+            <h1 ><i class="fa fa-user"></i> Customers</h1>
+        </div>       
     </div>
     <div class="row">
+        <div  class="col-lg-6 col-md-6 col-sm-6 col-xm-6" id="total" style="position:static;align-items:center" >
+            <a class="btn btn-primary" routerLink="/addcustomer" ><h4><i class="fa fa-plus-circle"></i> Add Customer</h4></a>
+        </div>
+        <div  class="col-lg-6 col-md-6 col-sm-6 col-xm-6">
+            <div class="input-group container">
+                <form #search  submit="searchClients()">
+                        <input type="text" class="form-control" id="searchIt" name="searchName"  placeholder="Search" >
+                        <span class="input-group-btn">
+                            <div>
+                          <input class="btn btn-primary" type="submit" (click)="searchClients(search)" value="Search">
+                          <i class="fa fa-search"></i>
+                          </div>
+                        </span>
+            </form>
+        </div>
+    </div>
+   
+    <div class="row">
     <div class="col md-6" style="position:static">
-        <div class="text-right text-secondary">Total Balance:</div>
+        <div class="text-right text-secondary" >Total Balance:</div>
     </div>    
     </div>
     <table class="table table-striped" >
