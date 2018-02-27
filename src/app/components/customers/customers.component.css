@@ -1,6 +1,21 @@
-
+.input-group {
+    width:50%;
+   
+}
 #searchIt{
-    width:500px;
+    border-color: #007bff;
+    border-width: 4px;
+    box-shadow:1px 1px 1px 1px #007bff;
+    align-items:center; 
+    border-radius: 25px;
+    width:100%;
+}
+
+span button{
+    border-color: #007bff;
+    box-shadow:1px 1px 1px 1px #007bff;
+    align-items:center;  
+    border-radius: 25px;
 }
 .table thead{
     background-color:#10d6f5;

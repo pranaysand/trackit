@@ -8,18 +8,20 @@
         <div  class="col-lg-6 col-md-6 col-sm-6 col-xm-6" id="total" style="position:static;align-items:center" >
             <a class="btn btn-primary" routerLink="/addcustomer" ><h4><i class="fa fa-plus-circle"></i> Add Customer</h4></a>
         </div>
-        <div  class="col-lg-6 col-md-6 col-sm-6 col-xm-6">
+        <div #search class="col-lg-6 col-md-6 col-sm-6 col-xm-6">
             <div class="input-group container">
                 <form #search  submit="searchClients()">
                         <input type="text" class="form-control" id="searchIt" name="searchName"  placeholder="Search" >
+
                         <span class="input-group-btn">
                             <div>
-                          <input class="btn btn-primary" type="submit" (click)="searchClients(search)" value="Search">
-                          <i class="fa fa-search"></i>
+                          <input class="btn btn-primary" type="submit" (click)="searchClients(search)">
+                          
                           </div>
                         </span>
             </form>
         </div>
+    </div>
     </div>
    
     <div class="row">
@@ -47,5 +49,5 @@
             </tr>
         </tbody>
     </table>
-</div>
+
 
