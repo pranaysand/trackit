@@ -1,29 +1,45 @@
 
 <div class="row" >
         <div class="col-lg-6 col-md-6">
-                <div >
-                        <h1>Customers</h1>
+                
+                <div class="row" >
+  
+  <h1 style="text-align:center"><img src="../../../assets/assets-icon-customers.png" alt="Customers" width="65 " height="40" style="padding-right:5px;padding-bottom:5px ">Customers</h1>
+  </div>
                 <div class="cards" style="width:100%">
                        <table class="table-striped">
                                <thead class="table thead-inverse">
                                        <tr>
+                                               <th>No</th>
                                                <th>Name</th>
                                                <th>Email</th>
                                                <th>Balance</th>
                                        </tr>
                                </thead>
                                <tbody class="table tbody-inverse">
-                                       <tr *ngFor="let x of customers">
-                                               <th>{{x.firstName}} {{x.lastName}}</th>
-                                               <th>{{x.email}}</th>
-                                               <th>{{x.balance}}</th>
+                                       <tr *ngFor="let x of customers; let i=index" >
+                                
+                                                <th *ngIf="i<10">{{i+1}}</th>
+                                               <th *ngIf="i<10">{{x.firstName}} {{x.lastName}}</th>
+                                               <th *ngIf="i<10">{{x.email}}</th>
+                                               <th *ngIf="i<10">{{x.balance}}</th>
+                                     
                                        </tr>
-                               </tbody>
+                              </tbody>
+                              <tfoot>
+                                      
+                                              <td>
+                                                        View All Customers
+                                              </td>
+                              
+                                      
+                              </tfoot>
                        </table>
                                 
                         </div>
                 </div>
                 </div>
-        </div>
+     
+        
 
 

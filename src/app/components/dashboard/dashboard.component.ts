@@ -3,6 +3,7 @@ import {CustomersService} from '../../services/customers.service';
 import{Customer} from "../../models/customer";
 import{CustomersComponent} from "../customers/customers.component"
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -18,7 +19,8 @@ customers:any;
 this.customersService.getCustomers().subscribe((data)=>
   {
     this.customers=data;
-    console.log(this.customers);
+    return this.customers.filter((item, index) => index > 10 );
+    //console.log(this.customers);
   })
 
 } 

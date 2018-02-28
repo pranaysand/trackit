@@ -9,7 +9,7 @@ import { DatePipe, CurrencyPipe } from '@angular/common';
   styleUrls: ['./customers.component.css']
 })
 export class CustomersComponent implements OnInit {
-  customers:any="hello";
+  customers:any;
   toggleSort:boolean=true;
   refresh:Customer[];
  
@@ -148,7 +148,7 @@ sortDate(){
 }
 searchClients(){
   this.customers=this.refresh;// I made this thing to set the customers to all customers before the search
-  var searchValue = document.getElementById("searchIt").value;
+  var searchValue=document.getElementById("searchIt").value;
   console.log(searchValue);
   this.customers=this.customers.filter((value:any)=>{
     return value.firstName.toString().toLowerCase().indexOf(searchValue.toString().toLowerCase()) > -1;

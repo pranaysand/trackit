@@ -25,7 +25,10 @@ table thead{
     background-color:#52b3c1;
     align-items: center;
 }
-
+tfoot{
+    background-color:#52b3c1;
+    align-items: center;
+}
 .table{
     background:#d7faff;
     box-shadow:1px 1px 5px 5px #eae7e7;
@@ -55,7 +58,7 @@ tr{
     
 }
 h1{
-    margin-left:70px;
+   
     font-weight:lighter;
     font-size:45px;
     align-items: center
