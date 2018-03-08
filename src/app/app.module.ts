@@ -22,6 +22,7 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
 import { ProvidersComponent } from './components/providers/providers.component';
 import { ComponentsComponent } from './components/components.component';
 import { AddProviderComponent } from './components/add-provider/add-provider.component';
+import { ProvidersService} from './services/providers.service'
 
 
 //Creating Routes.
@@ -32,6 +33,7 @@ const appRoutes: Routes=[
   {path:'customers',component:CustomersComponent},
   {path:'addcustomer', component:AddCustomerComponent},
   {path:"customers/:id",component: CustomerDetailsComponent},
+  {path:"providers",component:ProvidersComponent},
 
  
 ]
@@ -63,7 +65,7 @@ const appRoutes: Routes=[
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     FormsModule
   ],
-  providers: [CustomersService,CustomersComponent],
+  providers: [CustomersService,ProvidersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
