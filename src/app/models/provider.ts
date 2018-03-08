@@ -1,4 +1,5 @@
-export interface Providers{
+export interface Provider{
+    id:string;
     firstName:string;
     lastName:string;
     email:string;
