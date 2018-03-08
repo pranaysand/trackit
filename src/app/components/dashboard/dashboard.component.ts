@@ -20,10 +20,11 @@ this.customersService.getCustomers().subscribe((data)=>
   {
     this.customers=data;
     return this.customers.filter((item, index) => index > 10 );
+    
     //console.log(this.customers);
   })
 
-} 
+}
 }
 
 

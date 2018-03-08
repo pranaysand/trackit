@@ -19,6 +19,10 @@ import{environment} from '../environments/environment';
 import { CustomersComponent } from './components/customers/customers.component';
 import { AddCustomerComponent } from './components/add-customer/add-customer.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
+import { ProvidersComponent } from './components/providers/providers.component';
+import { ComponentsComponent } from './components/components.component';
+import { AddProviderComponent } from './components/add-provider/add-provider.component';
+
 
 //Creating Routes.
 const appRoutes: Routes=[
@@ -44,6 +48,10 @@ const appRoutes: Routes=[
     CustomersComponent,
     AddCustomerComponent,
     CustomerDetailsComponent,
+    ProvidersComponent,
+    ComponentsComponent,
+    AddProviderComponent,
+    
   
   ],
   imports: [
