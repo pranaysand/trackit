@@ -1,3 +1,53 @@
-<p>
-  providers works!
-</p>
+<div>
+  <div class="row" >
+      <div class="col-lg-12 text-center" style="position:static" >
+          <h1 ><img src="../../../assets/assets-icon-customers.png" alt="Providers" width="65 " height="40" style="padding-right:5px;padding-bottom:5px ">Providers</h1>
+      </div>       
+  </div>
+  <div class="row">
+      <div  class="col-lg-6 col-md-6 col-sm-6 col-xm-6" id="total" style="position:static;align-items:center" >
+          <a class="btn btn-primary" routerLink="/addcustomer" ><h4><i class="fa fa-plus-circle"></i> Add Provider</h4></a>
+      </div>
+      <div #search class="col-lg-6 col-md-6 col-sm-6 col-xm-6">
+          <div class="input-group container">
+              <form #search  submit="searchClients()">
+                      <input type="text" class="form-control" id="searchIt" name="searchName"  placeholder="Search" >
+
+                      <span class="input-group-btn">
+                          <div>
+                        <input class="btn btn-primary" type="submit" >
+                        
+                        </div>
+                      </span>
+          </form>
+      </div>
+  </div>
+  </div>
+ 
+  <div class="row">
+  <div class="col md-6" style="position:static">
+      <div class="text-right text-secondary" >Total Balance:</div>
+  </div>    
+  </div>
+  <table class="table table-striped" >
+      <thead class="thead-inverse" align="center">
+          <tr>
+              <th><button class="btn btn-info" (click)="sortName()">Name <i class="fa fa-sort"></i></button></th>
+              <th><button class="btn btn-info"(click)="sortEmail()">Email <i class="fa fa-sort"></i></button></th>
+              <th><button class="btn btn-info" (click)="sortBalance()">Balance <i class="fa fa-sort"></i></button></th>
+              <th><button class="btn btn-info" (click)="sortDate()">Date Joined <i class="fa fa-sort"></i></button></th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody align="center">
+          <tr *ngFor="let x of customers">
+              <th>{{x.firstName}}</th>
+              <th>{{x.email}}</th>
+              <th>{{x.balance | currency}}</th>
+              <th>{{x.dateCreated | date:"shortDate"}}</th>
+              <button class="btn btn-primary" routerLink="/customers/{{x.id}}">Details</button>
+          </tr>
+      </tbody>
+  </table>
+
+
