@@ -8,8 +8,8 @@ export interface Provider{
     dateCreated:Date;
     activity:boolean;
     address:{
-        street1:string,
-        street2:string,
+        street1:string;
+        street2:string;
         city:string;
         state:string;
         zipCode:string;

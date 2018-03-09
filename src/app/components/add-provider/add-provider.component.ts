@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Provider} from "../../models/provider"
 
 @Component({
   selector: 'app-add-provider',
@@ -6,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-provider.component.css']
 })
 export class AddProviderComponent implements OnInit {
+provider:Provider={
+  firstName:"Firstname",
+  lastName :'',
+  id:'',
+  email:''
+ 
+  
+};
+
 
   constructor() { }
 

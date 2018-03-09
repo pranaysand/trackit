@@ -1,0 +1,45 @@
+.card-header{
+    background-color:#10d6f5;
+    align-items: center;
+}
+
+form{
+    background:#d7faff;
+    box-shadow:1px 1px 5px 5px #eae7e7;
+}
+
+.table thead th button{
+    padding-left:40px;
+    padding-right:40px;
+    font-weight:bold;
+    box-shadow:1px 1px 5px 5px #13dbfb;
+}
+tr button{
+    box-shadow:1px 1px 3px 3px #e3edf7; 
+    align-items:center; 
+    text-align: justify ;
+}
+tr{
+    align-items:center;  
+}
+form button{
+    align-items:center;
+    box-shadow:1px 1px 5px 5px #dcddde; 
+    background: #10d6f5;
+}
+#total{
+    
+    
+}
+h1{
+    margin-left:70px;
+    font-weight:lighter;
+    font-size:45px;
+    align-items: center
+}
+.btn{
+    align-items:center;
+    
+    padding-left:40px;
+    padding-right:40px;
+}

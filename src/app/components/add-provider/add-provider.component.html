@@ -1,3 +1,95 @@
-<p>
-  add-provider works!
-</p>
+<div class="col md-6" stype="{margin-bottom:10px}">
+  <a class="btn btn-primary" routerLink="/providers"><h4><i class="fa fa-angle-double-left"></i>Providers</h4></a>
+</div>
+<br>
+<div class="card" style="position:static">
+<div class="card-header">Add Providers</div>
+<div class="card-body">
+  <form #addProvider="ngForm" (ngSubmit)="onSubmit(addProvider)">
+    <div class="form-group">
+      <label for="firstName" >First Name</label>
+      <input [(ngModel)]="provider.firstName"
+      class="form-control"
+      type="text"
+      name="firstName"
+      required
+      minlength="3"
+      #firstName="ngModel"
+      [ngClass]="{'is-invalid':firstName.errors && firstName.touched}"
+      >
+    </div>
+    <div class="form-group">
+        <label for="lastName" >Last Name</label>
+        <input [(ngModel)]="provider.lastName"
+        class="form-control"
+        type="text"
+        name="lastName"
+        required
+        minlength="3"
+        #lastName="ngModel"
+        >
+      </div>
+      <div class="form-group">
+          <label for="firstName" >Email</label>
+          <input [(ngModel)]="provider.email"
+          class="form-control"
+          type="string"
+          name="email"
+          required
+          minlength="3"
+          #email="ngModel"
+          >
+        </div>
+        <div class="form-group">
+            <label for="firstName" >Balance</label>
+            <input [(ngModel)]="provider.balance"
+            class="form-control"
+            type="number"
+            name="balance"
+            #balance="ngModel"
+            >
+          </div>
+          <div class="form-group">
+            <label for="DOB" >Date of Birth (MM/DD/YYYY)</label>
+            <input [(ngModel)]="provider.DOB"
+            class="form-control"
+            name="DOB"
+            #DOB="ngModel"
+            >
+          </div>
+          <div class="dropdown" >
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Add Address
+              </button>
+              <div id="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-item" >
+                    <div class="form-group">
+                        <label for="street1" >Street 1: </label>
+                        <input [(ngModel)]="provider.address.street1"
+                        class="form-control"
+                        type="text"
+                        name="provider.address.street1"
+                        #provider.address.street1="ngModel"
+                        >
+                      </div>
+                </div>
+              <div class="dropdown-item">
+                <div class="form-group">
+                  <label for="street2" >Street 2: </label>
+                  <input [(ngModel)]="provider.address.street2"
+                  class="form-control"
+                  name="provider.address.street2"
+                  #customer.address.street2="ngModel"
+                  >
+                </div>
+              </div>
+                
+              </div>
+            </div>
+            <div align="center">
+              <input type="submit" value="Submit" class="btn btn-primary " #submit>
+            </div>
+
+  </form>
+</div>
+</div>

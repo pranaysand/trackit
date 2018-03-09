@@ -34,6 +34,7 @@ const appRoutes: Routes=[
   {path:'addcustomer', component:AddCustomerComponent},
   {path:"customers/:id",component: CustomerDetailsComponent},
   {path:"providers",component:ProvidersComponent},
+  {path:"addprovider",component:AddProviderComponent}
 
  
 ]
