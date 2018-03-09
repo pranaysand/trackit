@@ -26,6 +26,9 @@ provider:Observable<Provider>;
 console.log(this.providers);
 return this.providers;
   }
+  addProvider(value){
+    this.providersCollection.add(value);
+  }
 
 
 }
