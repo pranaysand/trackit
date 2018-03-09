@@ -65,7 +65,7 @@ const appRoutes: Routes=[
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     FormsModule
   ],
-  providers: [CustomersService,ProvidersService],
+  providers: [CustomersService,CustomersComponent,ProvidersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
